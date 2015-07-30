@@ -30,6 +30,9 @@
                 <td>@usuario.Nome</td>
                 <td>@usuario.Telefone</td>
                 <td>@usuario.Email</td>
+                <td>@Html.ActionLink("Editar", "FormularioEdita", new { id = usuario.Id })</td>
+                <td>@Html.ActionLink("Deletar","Deleta",new {id = usuario.Id})</td>
+                <td></td>
             </tr>
         }
     </tbody>

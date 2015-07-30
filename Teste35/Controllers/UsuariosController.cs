@@ -19,9 +19,30 @@ namespace Teste35.Controllers
             return View(usuarios);
         }
 
+        [HttpPost]
         public ActionResult Adiciona(Usuario usuario)
         {
             dao.Adiciona(usuario);
+            return RedirectToAction("index");
+        }
+
+        public ActionResult FormularioEdita(int id)
+        {
+            Usuario usuario = dao.Busca(id);
+            return View(usuario);
+        }
+
+        [HttpPost]
+        public ActionResult Edita(Usuario usuario)
+        {
+            dao.Edita(usuario);
+            return RedirectToAction("index");
+        }
+
+        public ActionResult Deleta(int id)
+        {
+            Usuario usuario = dao.Busca(id);
+            dao.Deleta(usuario);
             return RedirectToAction("index");
         }
     }

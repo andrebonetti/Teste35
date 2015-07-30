@@ -1,0 +1,21 @@
+﻿@model Teste35.Models.Usuario
+
+<h2>FormularioEdita</h2>
+
+<form action="/Usuarios/Edita" method="post">
+
+    <input type="hidden" id="id" name="usuario.Id" class="form-control" value="@Html.DisplayFor(model => model.Id)" />
+
+    <label for="nome">Nome: </label>
+    <input type="text" id="nome" name="usuario.Nome" class="form-control" value="@Html.DisplayFor(model => model.Nome)" />
+
+    <label for="telefone">Telefone: </label>
+    <input type="text" id="nome" name="usuario.Telefone" class="form-control" value="@Html.DisplayFor(model => model.Telefone)">
+
+    <label for="Email">Email: </label>
+    <input type="text" id="email" name="usuario.Email" class="form-control" value="@Html.DisplayFor(model => model.Email)">
+
+    <input type="submit" class="btn btn-primary" />
+
+</form>
+
