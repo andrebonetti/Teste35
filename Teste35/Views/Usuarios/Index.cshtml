@@ -1,0 +1,39 @@
+﻿@model  IList<Teste35.Models.Usuario>
+
+<form action="/Usuarios/Adiciona" method="post">
+
+    <label for="nome">Nome: </label>
+    <input type="text" id="nome" name="usuario.Nome" class="form-control"/>
+
+    <label for="telefone">Telefone: </label>
+    <input type="text" id="nome" name="usuario.Telefone" class="form-control">
+
+    <label for="Email">Email: </label>
+    <input type="text" id="email" name="usuario.Email" class="form-control">
+
+    <input type="submit" class="btn btn-primary" />
+
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.Nome</td>
+                <td>@usuario.Telefone</td>
+                <td>@usuario.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Index</h2>
+
